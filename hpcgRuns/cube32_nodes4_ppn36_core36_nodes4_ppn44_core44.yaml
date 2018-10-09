@@ -1,0 +1,124 @@
+Watts: 3527
+HPCG-Benchmark version: 3.0
+Release date: November 11, 2015
+Machine Summary:
+  Distributed Processes: 304
+  Threads per processes: 1
+Global Problem Dimensions:
+  Global nx: 128
+  Global ny: 128
+  Global nz: 608
+Processor Dimensions:
+  npx: 4
+  npy: 4
+  npz: 19
+Local Domain Dimensions:
+  nx: 32
+  ny: 32
+  nz: 32
+########## Problem Summary  ##########:
+Setup Information:
+  Setup Time: 0.713011
+Linear System Information:
+  Number of Equations: 9961472
+  Number of Nonzero Terms: 265873528
+Multigrid Information:
+  Number of coarse grid levels: 3
+  Coarse Grids:
+    Grid Level: 1
+    Number of Equations: 1245184
+    Number of Nonzero Terms: 32851000
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 2
+    Number of Equations: 155648
+    Number of Nonzero Terms: 4011544
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 3
+    Number of Equations: 19456
+    Number of Nonzero Terms: 478216
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+########## Memory Use Summary  ##########:
+Memory Use Information:
+  Total memory used for data (Gbytes): 7.14011
+  Memory used for OptimizeProblem data (Gbytes): 0
+  Bytes per equation (Total memory / Number of Equations): 716.773
+  Memory used for linear system and CG (Gbytes): 6.28118
+  Coarse Grids:
+    Grid Level: 1
+    Memory used: 0.75234
+    Grid Level: 2
+    Memory used: 0.094603
+    Grid Level: 3
+    Memory used: 0.011991
+########## V&V Testing Summary  ##########:
+Spectral Convergence Tests:
+  Result: PASSED
+  Unpreconditioned:
+    Maximum iteration count: 11
+    Expected iteration count: 12
+  Preconditioned:
+    Maximum iteration count: 2
+    Expected iteration count: 2
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon:
+  Result: PASSED
+  Departure for SpMV: 2.89937e-09
+  Departure for MG: 7.43429e-11
+########## Iterations Summary  ##########:
+Iteration Count Information:
+  Result: PASSED
+  Reference CG iterations per set: 50
+  Optimized CG iterations per set: 50
+  Total number of reference iterations: 500
+  Total number of optimized iterations: 500
+########## Reproducibility Summary  ##########:
+Reproducibility Information:
+  Result: PASSED
+  Scaled residual mean: 0.000225448
+  Scaled residual variance: 0
+########## Performance Summary (times in sec) ##########:
+Benchmark Time Summary:
+  Optimization phase: 9.53674e-07
+  DDOT: 2.41538
+  WAXPBY: 0.453379
+  SpMV: 7.92647
+  MG: 50.5141
+  Total: 61.3104
+Floating Point Operations Summary:
+  Raw DDOT: 3.00836e+10
+  Raw WAXPBY: 3.00836e+10
+  Raw SpMV: 2.71191e+11
+  Raw MG: 1.51464e+12
+  Total: 1.846e+12
+  Total with convergence overhead: 1.846e+12
+GB/s Summary:
+  Raw Read B/W: 185.505
+  Raw Write B/W: 42.8703
+  Raw Total B/W: 228.375
+  Total with convergence and optimization phase overhead: 225.75
+GFLOP/s Summary:
+  Raw DDOT: 12.455
+  Raw WAXPBY: 66.3543
+  Raw SpMV: 34.2133
+  Raw MG: 29.9845
+  Raw Total: 30.109
+  Total with convergence overhead: 30.109
+  Total with convergence and optimization phase overhead: 29.7629
+User Optimization Overheads:
+  Optimization phase time (sec): 9.53674e-07
+  Optimization phase time vs reference SpMV+MG time: 4.11863e-06
+DDOT Timing Variations:
+  Min DDOT MPI_Allreduce time: 0.165901
+  Max DDOT MPI_Allreduce time: 22.9221
+  Avg DDOT MPI_Allreduce time: 9.98564
+__________ Final Summary __________:
+  HPCG result is VALID with a GFLOP/s rating of: 29.7629
+  HPCG 2.4 Rating (for historical value) is: 30.109
+  Reference version of ComputeDotProduct used: Performance results are most likely suboptimal
+  Reference version of ComputeSPMV used: Performance results are most likely suboptimal
+  Reference version of ComputeMG used: Performance results are most likely suboptimal
+  Reference version of ComputeWAXPBY used: Performance results are most likely suboptimal
+  Results are valid but execution time (sec) is: 61.3104
+  Official results execution time (sec) must be at least: 1800
